@@ -26,7 +26,7 @@ int compare(int a, int b, int c)
   {
     largest = a;
   }
-  else if((b>a) && (b>c))
+  else if((b>c))
     {
     largest = b;
     }
@@ -38,5 +38,5 @@ int compare(int a, int b, int c)
 }
 void output(int a, int b, int c, int largest)
 {
-printf("The largest of the three numbers is %d",largest);
+printf("The largest of the three numbers is %d\n",largest);
 }

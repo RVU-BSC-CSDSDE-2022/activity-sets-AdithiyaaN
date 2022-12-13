@@ -23,5 +23,5 @@ int input()
 }
 void output(int a, int b, int x)
 {  
-printf("the sum of %d and %d is %d",a,b,x);
+printf("the sum of %d and %d is %d\n",a,b,x);
 }

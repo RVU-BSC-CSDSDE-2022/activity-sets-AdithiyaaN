@@ -8,8 +8,8 @@ int main()
 {
   int sum,n;
   n = input_array_size();
-  int a[n];
-  input_array(n,a);
+  int a[n]; 
+  input_array(n,a); 
   sum = sum_n_array(n,a);
   output(n,a,sum);
   return 0;
