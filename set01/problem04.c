@@ -6,7 +6,7 @@ main()
 {
   int a,b,sum;
   a=input();
-  b=input();
+  b=input(); 
   add(a,b, &sum);
   output(a,b,sum);
 }

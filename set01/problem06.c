@@ -24,11 +24,11 @@ void compare(int a, int b, int c, int *largest)
     {
     *largest = a;
     }
-    else if(b>c)
+    if(b>c)
     {
     *largest = b;  
     }
-    else
+    if(c>b)
     *largest = c;
 }
 void output(int a, int b, int c, int largest)
