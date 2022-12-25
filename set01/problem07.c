@@ -14,7 +14,7 @@ main()
 int input_n()
 {
   int x;
-  printf("Enter any natural number");
+  printf("Enter any natural number: ");
   scanf("%d", &x);
   return x;
 }
@@ -29,5 +29,5 @@ int sum_n_nos(int n)
 }
 void output(int n, int sum)
 {
-  printf("Sum of all natural number till n is %d", sum);
+  printf("%d\n", sum);
 }

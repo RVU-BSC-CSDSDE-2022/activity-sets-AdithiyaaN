@@ -27,7 +27,7 @@ int stringcompare(char *string1, char *string2)
   res = 0;
   for(i=0;i<1000;i++)
   {
-    printf("%d\n",i);
+    // printf("%d\n",i);
     if (string1[i] == '\0' || string2[i] == '\0')
     {
       break;
