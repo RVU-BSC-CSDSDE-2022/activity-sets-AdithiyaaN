@@ -29,6 +29,10 @@ void output(int num1, int den1, int num2, int den2, int res_num, int res_den);
 typedef struct {
     int num, den;
 } Fraction;
+
+Fraction input_frac();
+Fraction smallest_frac(Fraction f1, Fraction f2, Fraction f3);
+void output(Fraction f1, Fraction f2, Fraction f3, Fraction result);
 ```
 
 ***Input***
