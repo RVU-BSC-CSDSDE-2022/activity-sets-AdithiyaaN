@@ -26,14 +26,20 @@ void input(int *num1, int *den1, int *num2, int *den2)
 void add(int num1, int den1, int num2, int den2, int *res_num, int *res_den)
 {
   *res_num = num1 + num2;
-  if (den1 != den2)
+  if (den1 != den2 && (den1%den2 == 0 || den2%den1 == 0))
+  {
+    *res_den = (den1 > den2)? den1 : den2;
+    *res_num = ((*res_den/den1) * num1) + (*res_den/den2) * num2;
+  }
+  else if (den1 != den2 && (den1%den2 != 0 || den2%den1 != 0))
   {
     *res_den = den1 * den2;
-    *res_num = num1 * den2 + num2 * den1;
+    *res_num = ((*res_den/den1) * num1) + (*res_den/den2) * num2;
   }
   else
   {
     *res_den = den1;
+    *res_num = num1 + num2;
   }
 }
 
