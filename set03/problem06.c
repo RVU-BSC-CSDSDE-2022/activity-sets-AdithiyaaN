@@ -39,12 +39,12 @@ int sub_str_index(char* string, char* substring)
    j = 0;
  }
 } 
-  w = (j == len)? (i-j) : 0;
+  w = (j == len)? (i-j) : -1;
   return w;
 } 
   
 
 void output(char *string, char *substring, int index)
 {
-(index != 0)? printf("The index of '%s' in '%s' is %d\n",substring,string,index) : printf("The substring not found\n");
+(index != -1)? printf("The index of '%s' in '%s' is %d\n",substring,string,index) : printf("The substring not found\n");
 }
