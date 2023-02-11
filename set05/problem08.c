@@ -15,10 +15,13 @@ void output(float total_weight);
 
 int main(void)
 {
-int n;
+int n; //indentation
+  
 n = input_n();
+  
 Camel c[n];
 float tw,t;
+  
 input(n,c,&tw);
 find_camel_weight(n,c);
 t = compute_total_weight(n,c,tw);
@@ -39,8 +42,10 @@ void input(int n, Camel c[n], float *truck_weight)
     {
       printf("%d camel radius: ",i+1);
       scanf("%f",&c[i].radius);
+      
       printf("%d camel height: ",i+1);
       scanf("%f",&c[i].height);
+      
       printf("%d camel length: ",i+1);
       scanf("%f",&c[i].length);
     }

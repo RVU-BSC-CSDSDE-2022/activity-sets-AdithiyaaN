@@ -1,34 +1,34 @@
-// 6. Write a program to count the number of words in a string using strtok (_string.h_)
+// 6. Write a program to count the number of words in a string using strtok (_string.h_).
 
 #include<stdio.h>
 #include<string.h>
 
 void input_string(char *a);
-void copy_string(char *bla, char *string);
+void copy_string(char *b, char *string);
 int count_words(char *string);
-void output(char *bla, int no_words);
+void output(char *b, int no_words);
 
 int main(void)
 {
   int no_words;
-  char string[100],bla[100]; 
+  char string[100],b[100]; 
   input_string(string);
-  copy_string(bla,string);
-  no_words = count_words(string);
-  output(bla,no_words);
+  copy_string(b,string);
+  no_words = count_words(b);
+  output(string,no_words); //change variable names
 }
 
 void input_string(char *a)
 {
   printf("Enter a string: ");
-  gets(a);
+  fgets(a);
 }
 
-void copy_string(char *bla, char *string)
+void copy_string(char *b, char *string)
 {
   for(int i = 0; string[i] != '\0';i++)
     {
-      bla[i] = string[i];
+      b[i] = string[i];
     }
 }
 
@@ -44,7 +44,10 @@ int count_words(char *string)
   return count;
 }
 
-void output(char *bla, int no_words)
+void output(char *b, int no_words)
 {
- printf("The number of words in '%s' is %d",bla,no_words); 
+ printf("The number of words in '%s' is %d",b,no_words); //fix output
 }
+
+
+//try it without gets

@@ -3,17 +3,18 @@ int input_number();
 int is_composite(int n);
 void output(int n, int result);
 
-main()
+int main()
 {
   int n,result;
   n = input_number();
   result = is_composite(n);
   output(n,result);
+  return 0;
 }
 
 int input_number()
 {
-int a;
+int a;Q6
 printf("Enter a number: ");
 scanf("%d", &a);
 return a;

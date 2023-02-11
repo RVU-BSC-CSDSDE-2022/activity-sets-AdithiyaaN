@@ -1,8 +1,13 @@
+// 12. Write a C program to find the sum of _n_ complex numbers
+
 #include<stdio.h>
+
 struct _complex {
 	float real,imaginary;
 };
+
 typedef struct _complex Complex;
+
 int get_n();
 Complex input_complex();
 void input_n_complex(int n, Complex c[n]);
@@ -10,7 +15,7 @@ Complex add(Complex a, Complex b);
 Complex add_n_complex(int n, Complex c[n]);
 void output(int n, Complex c[n], Complex result);
 
-main()
+int main(void)
 {
   int n;
   n = get_n();
@@ -18,7 +23,6 @@ main()
   input_n_complex(n, c);
   result = add_n_complex(n, c);
   output(n,c,result);
-  // printf("%f + %fi", result.real,result.imaginary);
 }
 
 int get_n()
@@ -34,19 +38,17 @@ Complex input_complex()
 Complex x;
   printf("Enter a complex number : ");
   scanf("%f %f", &x.real,&x.imaginary);
-  // scanf("%f %f", &y.real,&y.imaginary);
   return x;
 }
 
 void input_n_complex(int n, Complex c[n])
 {
   Complex a; 
-for (int i = 0;i<n;i++)
-  {
-// printf("Enter a complex number : ");
-// scanf("%f %f", &a.real,&a.imaginary);
-    c[i] = input_complex();
-  }
+  
+  for (int i = 0;i<n;i++)
+    {
+      c[i] = input_complex();
+    }
 }
 
 Complex add(Complex a, Complex b)
@@ -74,6 +76,7 @@ void output(int n, Complex c[n], Complex result)
   Complex a; 
   for (int i=0;i<n;i++){
   printf("%f + %fi ", c[i].real,c[i].imaginary);
+    
     if (i< n-1)
       {
       printf("+");

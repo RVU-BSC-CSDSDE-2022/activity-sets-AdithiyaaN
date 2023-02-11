@@ -1,6 +1,7 @@
 // 2. Write a program to find the smallest of three fractions
 
-#include<stdio.h>
+#include<stdio.h> //add space
+
 typedef struct {
     int num, den;
 } Fraction;
@@ -30,12 +31,13 @@ Fraction input_frac()
 Fraction smallest_frac(Fraction f1, Fraction f2, Fraction f3)
 {
   Fraction s;
-  int a,b,c,r;
-  a = f1.num/f1.den;
-  b = f2.num/f2.den;
-  c = f3.num/f3.den;
-
+  float a,b,c,r;
+  a = f1.num * 1.0/f1.den * 1.0;
+  b = f2.num * 1.0/f2.den * 1.0;
+  c = f3.num * 1.0/f3.den * 1.0;
+  
   // r = (a < b)? (a < c? a:c) : (b < c? b:c);
+  
   if (a < b && a < c) {s = f1;}
   else if (b < c) {s = f2;}
   else {s = f3;}

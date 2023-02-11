@@ -48,7 +48,7 @@ void find_length(Line *l)
   a = (l->p2.x - l->p1.x)*(l->p2.x - l->p1.x);
   b = (l->p2.y - l->p1.y)*(l->p2.y - l->p1.y);
     
-  // l->distance = pow((l->p2.x - l->p1.x),2) + pow((l->p2.y - l->p1.y),2); 
+  // l->distance = pow((l->p2.x - l->p1.x),2) + pow((l->p2.y - l->p1.y),2); //remove commented code lines
   l-> distance = sqrt(a + b);
 }
 

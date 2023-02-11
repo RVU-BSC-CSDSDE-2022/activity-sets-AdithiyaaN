@@ -51,7 +51,7 @@ void input_n_fractions(int n, Fraction f[n])
 
 int find_gcd(int a, int b)
 {
-  if(a==0)
+  if(a==0) //indentation
     return b;
   return find_gcd(b%a,a);
 }
@@ -68,6 +68,7 @@ Fraction add_fractions(Fraction f1, Fraction f2)
   else
   {s.num = f1.num * f2.den + f2.num * f1.den;
   s.den = f1.den *f2.den;}
+  
   hcf = find_gcd(s.num,s.den);
   s.num = s.num/hcf;
   s.den = s.den/hcf;
@@ -88,12 +89,14 @@ Fraction add_n_fractions(int n, Fraction f[n])
 
 void output(int n, Fraction f[n], Fraction sum)
 {
+  int a = n - 1;
   for(int i = 0;i<n;i++ )
   {
     printf("%d/%d",f[i].num,f[i].den);
     
-    if (n-1)
+    if (a != 0)
       printf(" + ");
+        a--;
   }
-  printf(" = %d/%d\n",sum.num,sum.den);
+  printf(" = %d/%d\n",sum.num,sum.den); //check output
 }

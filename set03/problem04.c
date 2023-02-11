@@ -1,6 +1,7 @@
 // 4. Write a program to find nth number in fibonacci sequence.
 
-#include<stdio.h>
+#include<stdio.h> //add space
+
 int input();
 int find_fibo(int n);
 void output(int n, int fibo);

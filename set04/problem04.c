@@ -30,9 +30,12 @@ int input_degree()
 
 void input_coefficients(int n, float a[n])
 { 
+  int z = n+1;
+  
   for(int i = 0; i<=n ;i++)
     {
-      printf("Enter coefficient x^%d : ",i);
+      z = z - 1;
+      printf("Enter coefficient x^%d : ",z);
       scanf("%f",&a[i]);
     }
 }
@@ -47,15 +50,25 @@ float input_x()
 
 float evaluate_polynomial(int n, float a[n], float x)
 {
-  float s;
-  for(int i = 0;i<=n;i++)
+  float temp = a[0];
+  
+  for(int i = 1; i<=n; i++)
     {
-      s = s + a[i] * pow(x,i);
+      temp = a[i] + temp * x; 
     }
-  return s;
+  return temp;
 }
 
 void output(int n, float a[n], float x, float result)
 {
-  printf("%.2f",result);
+  int z = n + 1;
+  printf("\nH(");
+  
+    for(int i = 0; i<=n; i++)   {printf("%.0f, ",a[i]);}
+  
+  printf("%.0f) = ",x);
+
+    for(int i = 0; i < n; i++)    {z--;printf("%.2f * %.2f^%d + ",a[i],x,z);}
+
+  printf("%.2f = %.2f\n\n",a[n],result);
 }

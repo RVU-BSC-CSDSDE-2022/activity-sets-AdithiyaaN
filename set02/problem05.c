@@ -1,4 +1,4 @@
- // Write a program to find GCD _(HCF)_ of two numbers.
+// Write a program to find GCD _(HCF)_ of two numbers.
 
 #include<stdio.h>
 int input();
@@ -11,7 +11,7 @@ void main()
   x = input();
   y = input();
   gcd = find_gcd(x,y);
-  printf("%d",gcd);
+  output(x,y,gcd);
 }
 
 int input()
@@ -34,7 +34,7 @@ int find_gcd(int a, int b)
   return h;
   }
 
-void ouput(int a, int b, int gcd)
+void output(int a, int b, int gcd)
 {
   printf("%d",gcd);
 }

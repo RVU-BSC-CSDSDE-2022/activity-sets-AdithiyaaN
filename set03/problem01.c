@@ -1,6 +1,7 @@
 // 1. Write a program to find the distance between 2 points
 
-#include<stdio.h>
+#include<stdio.h> 
+//add space
 void input(float *x1, float *y1, float *x2, float *y2);
 float find_distance(float x1, float y1, float x2, float y2);
 void output(float x1, float y1, float x2, float y2, float distance);
@@ -42,5 +43,5 @@ float find_distance(float x1, float y1, float x2, float y2)
 
 void output(float x1, float y1, float x2, float y2, float distance)
 {
-  printf("%f\n",distance);
+  printf("%f\n",distance); //check output (add the points too)
 }

@@ -1,7 +1,8 @@
 // 1.  Write a program to find the distance between two points.
 
 #include<stdio.h>
-#include<math.h>
+#include<math.h>//add space
+
 struct _point {
   float x;
   float y;

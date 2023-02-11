@@ -1,4 +1,7 @@
+// 8. Write a C program to find sum of _n_ different numbers entered by the user.
+
 #include <stdio.h>
+
 int input_array_size();
 void input_array(int n, int a[n]);
 int sum_n_array(int n, int a[n]);
@@ -14,6 +17,7 @@ int main()
   output(n,a,sum);
   return 0;
 }
+
 int input_array_size()
 {
   int a;
@@ -21,6 +25,7 @@ int input_array_size()
   scanf("%d", &a);
   return a;
 }
+
 void input_array(int n, int a[n])
 {
   int i;
@@ -29,24 +34,28 @@ void input_array(int n, int a[n])
   scanf("%d", &a[i]);
   }
 }
+
 int sum_n_array(int n, int a[n])
 {
   int i,result=0;
   for(i=0;i<n;i++)
-  {
-  result = result + a[i];
-  }
+    {
+      result = result + a[i];
+    }
   return result;
 }
+
 void output(int n, int a[n],int sum)
 {
   int i;
   for(i=0;i<n;i++)
   {
-  printf("%d",a[i]);
-    if(i < n-1) {
-      printf("+");
-    }
+    printf("%d",a[i]);
+    
+    if(i < n-1) 
+      {
+        printf("+");
+      }
   }
   printf(" is %d",sum);
 }

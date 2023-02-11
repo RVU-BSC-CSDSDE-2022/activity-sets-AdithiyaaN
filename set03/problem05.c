@@ -1,5 +1,5 @@
-// 5. Write a program to find all the prime numbers between 2 to n Eratosthenes Sieve method.
-#include<stdio.h>
+// 5. Write a program to find all the prime numbers between 2 to n Eratosthenes Sieve method. 
+#include<stdio.h> // add space between comments, header files and function prototypes
 #include<math.h>
 int input_array_size();
 void init_array(int n, int a[n]);
@@ -19,7 +19,7 @@ int main(void)
 int input_array_size()
 {
   int a;
-  printf("Enter a nmuber: ");
+  printf("Enter a nmuber: "); //number
   scanf("%d", &a);
   return a;
 }

@@ -1,6 +1,7 @@
 // 3. Write a program to find the `nCr` of given n and r
 
-#include<stdio.h>
+#include<stdio.h> //add space
+
 void input_n_and_r(int *n, int *r);
 int nCr(int n, int r);
 int facto(int a);
@@ -8,7 +9,7 @@ void output(int n, int r, int result);
 
 int main(void)
 {
-int n,r,result;
+  int n,r,result; //indentation
   input_n_and_r(&n,&r);
   result = nCr(n,r);
   output(n,r,result);
@@ -16,8 +17,10 @@ int n,r,result;
 
 void input_n_and_r(int *n, int *r)
 {
-  printf("Enter n and r: ");
-  scanf("%d %d",n,r);
+  printf("Enter n: "); //make it seperate statements
+  scanf("%d",n);
+  printf("Enter r: ");
+  scanf("%d",r);
 }
 
 int facto(int a)
@@ -38,5 +41,5 @@ int nCr(int n, int r)
 
 void output(int n, int r, int result)
 {
-  printf("For n = %d and r = %d, nCr = %d\n",n,rresult);
-}
+  printf("For n = %d and r = %d, nCr = %d\n",n,r,result); //variable name is different
+} 

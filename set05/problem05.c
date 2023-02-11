@@ -1,6 +1,7 @@
 // 5.  Write a program to find borga(x) given x.
 
-#include<stdio.h>
+#include<stdio.h> //include math library
+#include<math.h> 
 
 int input(int x);
 float borga_X(int x);
@@ -23,7 +24,7 @@ int input(int x)
   return x;
 }
 
-int facto(int n)
+int facto(int n) //do it without this function
 {
   if (n == 0)
     return 1;
@@ -36,7 +37,7 @@ float borga_X(int x)
   float n = 1,a = 1;
   for(i = 3 ,y = 1; a > 0.000001 ; i += 2)
     {
-      a = pow(x,y)/facto(i);
+      a = pow(x,y)/facto(i); //try without power function 
       n = n + a;
       y++;
     }

@@ -38,17 +38,26 @@ int find_gcd(int a, int b)
 
 Fraction add_fractions(Fraction f1, Fraction f2)
 {
-  Fraction s;
-  int a,b;
-  
-  a = f1.den > f2.den ? f1.den : f2.den;
-  b = f1.den < f2.den ? f1.den : f2.den;
-  s.den = find_gcd(a,b);
-  s.num = f1.num * (s.den/f1.den) + f2.num * (s.den/f2.den);
+  Fraction s; int lcm;
+
+  if (f1.den == f2.den)
+    {
+      s.num = f1.num + f2.num;
+      s.den = f1.den;
+    }
+  else 
+    {
+      s.num = f1.num * f2.den + f2.num * f1.den;
+      s.den = f1.den * f2.den;
+    }
+  lcm = find_gcd(s.num,s.den);
+  s.num = s.num/lcm;
+  s.den = s.den/lcm;
   return s;
 }
 
 void output(Fraction f1, Fraction f2, Fraction sum)
 {
-  printf("%d/%d + %d/%d = %d/%d\n",f1.num,f1.den,f2.num,f2.den,sum.num,sum.den);
+  (sum.den == sum.num)? printf("%d/%d + %d/%d = 1\n",f1.num,f1.den,f2.num,f2.den) : printf("%d/%d + %d/%d = %d/%d\n",f1.num,f1.den,f2.num,f2.den,sum.num,sum.den); 
+  //reduce the fraction, check the output for other fractions (for 1/2 + 1/3 it returns 0/1)
 }

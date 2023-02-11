@@ -10,10 +10,10 @@ struct camel {
 typedef struct camel Camel;
 
 Camel input();
-void find_weight(Camel *c); //passing address variable
+void find_weight(Camel *c);
 void output(Camel c);
 
-void main()
+void main() //int main 
 {
   Camel c; 
   c = input();
@@ -25,16 +25,23 @@ void main()
 Camel input()
 {
   Camel s;
-  printf("radius, height & length ");
-  scanf("%f %f %f",&s.radius,&s.height,&s.length);
+  printf("radius: "); //make it seperate statements
+  scanf("%f", &s.radius);
+
+  printf("height: ");
+  scanf("%f", &s.height);
+
+  printf("length: ");
+  scanf("%f",&s.length);
+  
   return s;
 }
 
 void find_weight(Camel *c)
 {
-  float pi = 3.14;
+    float pi = 3.14;
    // *c = M_PI * pow(s.radius,3) * sqrt(s.height * s.length);
-    c->weight = pi * pow(c->radius,3) * sqrt(c->height * c->length);
+    c->weight = pi * pow(c->radius,3) * sqrt(c->height * c->length);     //indentation
 }
 
 void output(Camel c)

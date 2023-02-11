@@ -1,7 +1,7 @@
 // 7.  Write a program to find out if the name of the camel is a nice name.
 
 #include<stdio.h>
-#include<string.h>
+#include<string.h> 
 
 void input(char *name);
 int has_nice_name(char *c);
@@ -31,7 +31,7 @@ int has_nice_name(char *c)
         {v = v + 1;}
       else {w = w + 1;}
     }
-  if ((v > 2) && (w > 2)) {return 1;}
+  if ((v >= 2) && (w >= 2)) {return 1;} //change condition
   else {return 0;}
 }
 

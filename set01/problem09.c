@@ -1,9 +1,11 @@
+// 9. Write a C program to find the [square root]
+
 #include<stdio.h>
 float input();
 float square_root(float n);
 void output(float n, float sqrroot);
 
-main() 
+int main() 
 {
   float x,s,n;
   x = input();
@@ -25,13 +27,16 @@ float square_root(float n)
  int i;
  float x0,x1;
  x0 = n/2;
+  
  while (1)
  {
-   if (i == 4)
-   {
-   break;
-   }
+       if (i == 4)
+       {
+         break;
+       }
+   
    i++;
+   
    x1 = (x0 + (n/x0))/2;
    x0 = x1;                
  } 

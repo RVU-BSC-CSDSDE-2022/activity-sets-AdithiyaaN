@@ -1,8 +1,12 @@
+// 5. Write a C program to compare three numbers using **pass by value**
+
 #include <stdio.h>
+
 int input();
 int compare(int a, int b, int c);
 void output(int a, int b, int c, int largest);  
-main()
+
+int main(void)
 {
   int a,b,c,largest;
   a = input();
@@ -10,15 +14,16 @@ main()
   c = input();
   largest = compare(a,b,c);
   output(a,b,c,largest);
-  return 0;
 }
+
 int input()
 {
   int x;
   printf("Enter numbers: ");
   scanf("%d",&x);
   return x;
-  }
+}
+
 int compare(int a, int b, int c)
 {
   int largest;
@@ -36,6 +41,7 @@ int compare(int a, int b, int c)
     }
   return largest;
 }
+
 void output(int a, int b, int c, int largest)
 {
 printf("The largest of the three numbers is %d\n",largest);

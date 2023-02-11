@@ -19,7 +19,7 @@ void input_string(char* a, char* b)
 {
   printf("Enter a string: ");
   scanf("%s",a);
-  printf("Enter the substring: \n");
+  printf("Enter the substring: ");
   scanf("%s",b);
 }
 

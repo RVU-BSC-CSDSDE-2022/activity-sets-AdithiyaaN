@@ -25,4 +25,4 @@ Triangle input_triangle() {
 
 void find_area(Triangle *t) { t->area = 0.5 * (t->base * t->altitude); }
 
-void output(Triangle t) { printf("%f\n", t.area); }
+void output(Triangle t) { printf("%f\n", t.area);}
